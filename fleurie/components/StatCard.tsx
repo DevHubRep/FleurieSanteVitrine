@@ -40,6 +40,7 @@ export default function StatCard({ value, label }: StatCardProps) {
         visible: { opacity: 1, y: 0 },
       }}
       transition={{ duration: 0.6, ease: "easeOut" }}
+      //Couleurs des box à changer
       className="
         relative group bg-white dark:bg-[#1a1a1a] rounded-3xl px-6 py-6 text-center w-full max-w-xs sm:max-w-[200px]
         shadow-lg hover:shadow-indigo-500/30 border border-transparent hover:border-indigo-400

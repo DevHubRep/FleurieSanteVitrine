@@ -41,7 +41,7 @@ export default function FaqSection() {
           >
             <button
               onClick={() => toggle(index)}
-              className="w-full flex justify-between items-center px-6 py-4 text-left hover:bg-[#1A183D] transition-colors duration-200"
+              className="w-full flex justify-between items-center px-6 py-4 text-left hover:bg-[#f8cde5] transition-colors duration-200"
             >
               <span className="text-lg font-medium text-black">
                 {faq.question}

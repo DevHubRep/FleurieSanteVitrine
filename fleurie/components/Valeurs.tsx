@@ -17,7 +17,7 @@ export default function Valeurs() {
 
 
 
-        {/* Bloc droite : Statistiques */}
+        {/* Bloc droit : Statistiques */}
         <div className="flex flex-wrap lg:flex-nowrap gap-6">
           <StatCard value="10+" label="Années d’expérience" />
           <StatCard value="50+" label="Clients accompagnés" />
