@@ -7,7 +7,7 @@ export default function Header() {
         <a href="#">ACCUEIL</a>
         <a href="#">PRODUIT</a>
         <a href="#">A PROPOS</a>
-        <a href="#">Faq</a>
+        <a href="#">FAQ</a>
       </nav>
       <div className="flex items-center gap-4">
         <button aria-label="Search">

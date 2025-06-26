@@ -13,9 +13,9 @@ const ImageTextSection: React.FC = () => {
          <Image
   src="/img/Doc.png"
   alt="Description de l'image"
-  width={300}
-  height={300}
-  className="z-10 rounded-t-[100%] -mb-20 shadow-soft h-[250px] w-[150px] max-w-xs object-cover lg:h-[500px] lg:w-auto lg:max-w-md"
+  width={400}
+  height={200}
+  className="relative z-10 shadow-2xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg scale-100"
 />
 
 <span
