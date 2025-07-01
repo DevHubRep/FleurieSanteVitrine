@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -13,6 +13,8 @@ import { WobbleCard } from "@/components/ui/wobble-card";
 import Valeurs from "@/components/Valeurs";
 import FaqSection from "@/components/FaqSection";
 import Footer from "@/components/Footer";
+import ProductWobbleCarousel from "@/components/ProductWobbleCarousel";
+import FleurieSanteCards from "@/components/pourquoiChoisir";
 
 // --- Modal Component with framer-motion ---
 type ModalProps = {
@@ -65,21 +67,61 @@ export default function Home() {
     {
       id: 1,
       title: "Nos Produits Détaillés",
-      content:
-        "Découvrez notre gamme complète de produits esthétiques conçus pour répondre à tous vos besoins.",
-    },
-    {
-      id: 2,
-      title: "Distribution",
-      content:
-        "Offrez une visibilité maximale à vos produits grâce à notre expertise en distribution.",
-    },
-    {
-      id: 3,
-      title: "Engagement Qualité et Innovation",
-      content:
-        "Notre engagement pour des produits de qualité repose sur une innovation constante et des tests rigoureux.",
-    },
+      content: (
+        <div className="w-full flex flex-col items-center">
+          <div className="relative w-full max-w-2xl">
+            <ProductWobbleCarousel
+              products={[
+                {
+                  image: "/img/mannequins/img_1.png",
+                  alt: "Soins de la peau",
+                  title: "Soins de la peau",
+                  description:
+                    "Crèmes hydratantes, soins anti-âge, sérums régénérants, lotions nettoyantes et purifiantes, soins capillaires (shampoings, après-shampoings, masques).",
+                },
+                {
+                  image: "/img/produits/img_12.png",
+                  alt: "Parfums et eaux de parfum",
+                  title: "Parfums et eaux de parfum",
+                  description:
+                    "Parfums, eaux de parfum, brumisateurs pour une expérience sensorielle unique.",
+                },
+                {
+                  image: "/img/mannequins/img_4.png ",
+                  alt: "Produits de bien-être",
+                  title: "Produits de bien-être",
+                  description:
+                    "Tisanes, baumes, vitamines, huiles essentielles et huiles de massage pour votre bien-être au quotidien.",
+                },
+              ]}
+            />
+          </div>
+        </div>
+      ),
+    },,
+   {
+     id: 2,
+     title: "Distribution",
+     content: (
+       <>
+         <p>
+           Nous distribuons nos produits dans nos propres magasins situés en centre-ville, ainsi qu’à travers un large réseau de détaillants, salons de beauté, pharmacies, parapharmacies, magasins cosmétiques, hôtels, spas et grandes surfaces.
+         </p>
+         <p className="mt-2">
+           Nous collaborons également avec des partenaires en ligne via notre site e-commerce&nbsp;: <a href="https://interpromoshop.com" target="_blank" rel="noopener noreferrer" className="text-rose-700 underline">INTERPROMOSHOP</a> pour offrir une expérience d’achat pratique, accessible et une livraison sécurisée. Notre réseau est en constante expansion, localement et à l’international.
+         </p>
+       </>
+     ),
+   },
+   {
+     id: 3,
+     title: "Engagement Qualité et Innovation",
+     content: (
+       <p>
+         En tant que société de distribution, nous nous engageons à collaborer avec des fabricants innovants et à la pointe de la technologie cosmétique. Nous sélectionnons des produits en phase avec les dernières tendances du marché, tout en respectant des standards élevés de sécurité et de durabilité.
+       </p>
+     ),
+   },
   ];
 
   return (
@@ -94,7 +136,7 @@ export default function Home() {
 
       <div className="mt-[30px] grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
         {/* Card 1 */}
-        <WobbleCard containerClassName="col-span-1 lg:col-span-2 h-full bg-rose-700 min-h-[500px] lg:min-h-[300px] relative overflow-hidden">
+        <WobbleCard containerClassName="col-span-1 lg:col-span-2 h-full bg-[#FFA8A8]  min-h-[500px] lg:min-h-[300px] relative overflow-hidden">
           <div className="max-w-xs relative z-10">
             <h2 className="text-left text-base md:text-xl lg:text-3xl font-semibold text-white">
               Nos Produits Détaillés
@@ -104,7 +146,7 @@ export default function Home() {
             </p>
             <button
               onClick={() => setOpenModal(1)}
-              className="mt-6 px-4 py-2 bg-white text-rose-700 font-semibold rounded hover:bg-rose-100 transition"
+              className="mt-6 px-4 py-2 bg-white text-rose-700 font-semibold rounded hover:bg-red-400 hover:text-white transition"
             >
               En savoir plus
             </button>
@@ -119,7 +161,7 @@ export default function Home() {
         </WobbleCard>
 
         {/* Card 2 */}
-        <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-rose-900 relative overflow-hidden">
+        <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-[#e26c94] relative overflow-hidden">
           <div className="relative z-10">
             <h2 className="text-base md:text-xl lg:text-3xl font-semibold text-white">
               Distribution
@@ -129,7 +171,7 @@ export default function Home() {
             </p>
             <button
               onClick={() => setOpenModal(2)}
-              className="mt-6 px-4 py-2 bg-white text-rose-900 font-semibold rounded hover:bg-rose-100 transition"
+              className="mt-6 px-4 py-2 bg-white text-rose-900 font-semibold rounded hover:bg-rose-600 hover:text-white transition"
             >
               En savoir plus
             </button>
@@ -137,7 +179,7 @@ export default function Home() {
         </WobbleCard>
 
         {/* Card 3 */}
-        <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-rose-800 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px] relative overflow-hidden">
+        <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-[#F8BBD0] min-h-[500px] lg:min-h-[600px] xl:min-h-[300px] relative overflow-hidden">
           <div className="max-w-sm relative z-10">
             <h2 className="text-left text-base md:text-xl lg:text-3xl font-semibold text-white">
               Engagement Qualité et Innovation
@@ -147,7 +189,7 @@ export default function Home() {
             </p>
             <button
               onClick={() => setOpenModal(3)}
-              className="mt-6 px-4 py-2 bg-white text-rose-800 font-semibold rounded hover:bg-rose-100 transition"
+              className="mt-6 px-4 py-2 bg-white text-rose-800 font-semibold rounded hover:bg-pink-600 hover:text-white transition"
             >
               En savoir plus
             </button>
@@ -175,6 +217,7 @@ export default function Home() {
 
       <Valeurs />
       <FaqSection />
+        <FleurieSanteCards/>
       <Footer />
     </div>
   );

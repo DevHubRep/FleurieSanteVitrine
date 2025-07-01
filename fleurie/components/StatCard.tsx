@@ -40,10 +40,9 @@ export default function StatCard({ value, label }: StatCardProps) {
         visible: { opacity: 1, y: 0 },
       }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      //Couleurs des box à changer
       className="
-        relative group bg-white dark:bg-[#1a1a1a] rounded-3xl px-6 py-6 text-center w-full max-w-xs sm:max-w-[200px]
-        shadow-lg hover:shadow-indigo-500/30 border border-transparent hover:border-indigo-400
+        relative group bg-[#FFF8F9] dark:bg-[#1a1a1a] rounded-3xl px-6 py-6 text-center w-full max-w-xs sm:max-w-[200px]
+        shadow-lg hover:shadow-[#E91E63]/30 border border-transparent hover:border-[#E91E63]
         transform hover:-translate-y-2 hover:scale-105 transition-all duration-300 overflow-hidden
       "
     >
@@ -51,15 +50,15 @@ export default function StatCard({ value, label }: StatCardProps) {
         initial={{ opacity: 0, y: -10 }}
         whileHover={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        className="absolute top-3 right-3 text-indigo-500 group-hover:animate-bounce"
+        className="absolute top-3 right-3 text-[#F6C667] group-hover:animate-bounce"
       >
         <Sparkles size={20} />
       </motion.div>
 
-      <div className="text-3xl sm:text-4xl font-extrabold text-black dark:text-white">
+      <div className="text-2xl sm:text-xl font-extrabold text-[#333333] dark:text-white">
         {value}
       </div>
-      <div className="text-gray-700 dark:text-gray-300 mt-2 text-sm sm:text-base">
+      <div className="text-[#9c6e7f] dark:text-gray-300 mt-2 text-sm sm:text-base">
         {label}
       </div>
     </motion.div>

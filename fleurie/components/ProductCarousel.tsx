@@ -31,7 +31,7 @@ const ProductCarousel = () => {
 
   return (
     <div className="py-12 px-6 max-w-7xl mx-auto">
-      <h2 className="text-4xl font-bold text-start mb-8">Nos Produits</h2>
+      <h2 className="text-4xl font-bold text-center mb-8 ">Nos Produits</h2>
 
       {/* Container scroll horizontal en mobile, grid en desktop */}
       <div className="flex overflow-x-auto gap-6 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

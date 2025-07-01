@@ -9,8 +9,8 @@ const goudy = Goudy_Bookletter_1911({
 });
 
 export const metadata: Metadata = {
-  title: 'Mon super site',
-  description: 'Description du site',
+  title: 'Fleurie Sante',
+  description: 'Site officiel de Fleurie Santé, votre partenaire pour des soins esthétiques et cosmétiques de qualité.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
