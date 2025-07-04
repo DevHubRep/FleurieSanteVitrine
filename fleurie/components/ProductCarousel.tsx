@@ -31,14 +31,14 @@ const ProductCarousel = () => {
 
   return (
     <div className="py-12 px-6 max-w-7xl mx-auto">
-      <h2 className="text-4xl font-bold text-center mb-8 ">Nos Produits</h2>
+      <h2 className="text-4xl font-bold text-center mb-8">Nos Produits</h2>
 
-      {/* Container scroll horizontal en mobile, grid en desktop */}
-      <div className="flex overflow-x-auto gap-6 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      {/* Scroll horizontal sur mobile, grid sur desktop */}
+      <div className="flex overflow-x-auto sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 scrollbar-none">
         {products.map((product) => (
           <div
             key={product.id}
-            className="min-w-[250px] sm:min-w-0 border rounded-lg bg-[#f6f2f3] shadow-md text-center p-4 flex-shrink-0"
+            className="w-[200px] sm:w-auto flex-shrink-0 border rounded-lg bg-[#f6f2f3] shadow-md text-center p-4"
           >
             <Image
               src={product.image}

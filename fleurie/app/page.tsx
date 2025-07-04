@@ -125,12 +125,16 @@ export default function Home() {
   ];
 
   return (
-    <div className="bg-pink-100">
+    <div className="bg-pink-100 scroll-smooth">
       <Header />
+       <section id="accueil"></section>
       <Hero />
+
       <ProductCarousel />
+      <section id="produit"></section>
       <div className="bg-white relative">
         <ImageTextSection />
+        <section id="a-propos"></section>
       </div>
       <Mission />
 
@@ -151,13 +155,6 @@ export default function Home() {
               En savoir plus
             </button>
           </div>
-          <Image
-            src="/linear.webp"
-            width={500}
-            height={500}
-            alt="linear demo image"
-            className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl pointer-events-none"
-          />
         </WobbleCard>
 
         {/* Card 2 */}
@@ -194,13 +191,6 @@ export default function Home() {
               En savoir plus
             </button>
           </div>
-          <Image
-            src="/linear.webp"
-            width={500}
-            height={500}
-            alt="linear demo image"
-            className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl pointer-events-none"
-          />
         </WobbleCard>
       </div>
 
@@ -217,6 +207,7 @@ export default function Home() {
 
       <Valeurs />
       <FaqSection />
+      <section id="faq"></section>
         <FleurieSanteCards/>
       <Footer />
     </div>
